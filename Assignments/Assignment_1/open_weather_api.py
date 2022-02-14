@@ -4,7 +4,7 @@ from pprint import pprint
 
 def main():
     city_name = input("Enter the name of a city to get the current weather: ")
-    current_weather = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid=9a89ae19bbafaa755ee77f42433b487e&units=metric')
+
 
     data = current_weather.json()
     temp = data['main']['temp']
