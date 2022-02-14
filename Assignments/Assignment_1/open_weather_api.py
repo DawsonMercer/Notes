@@ -14,7 +14,7 @@ def main():
     print(f"Wind speed in {city_name}: {wind}m/s")
     print(f"Weather description: {description}")
 
-    # forecast = requests.get(f'http://pro.openweathermap.org/data/2.5/forecast/hourly?q={city_name}&appid=9a89ae19bbafaa755ee77f42433b487e')
+
     # data = forecast.json()
     # print(data)
 
