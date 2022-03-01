@@ -15,6 +15,7 @@ def costs():
 
 
 def cost_probability_list():
+    #             [min, max]
     cost_1_prob = [0.10, 0.30]
     cost_2_prob = [0.20, 0.90]
     cost_3_prob = [0.05, 0.40]
@@ -58,6 +59,7 @@ def calculate_costs(cost_list, cost_prob_list, sim_max):
     for cost in cost_list:
         cost_total = 0
         for _ in range(0, sim_max-1):
+            #using the cost as an index identifier, get the cost_min and cost_max, [min, max]
             cost_total = cost_total + cost * random.uniform(cost_prob_list[cost_list.index(cost)][0],
                                                             cost_prob_list[cost_list.index(cost)][1])
         average_cost = cost_total/sim_max
