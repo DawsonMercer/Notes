@@ -10,13 +10,20 @@ class Employee:
             print("Invalid Employee ID")
         self.__salary = salary
 
+
+    @property
+    def salary(self):
+        return self.__salary
+
     @property
     def employee_id(self):
         return self.__employee_id
 
+    @property
     def annual_salary(self):
         return round(self.__salary * 12, 2)
 
+    @property
     def name(self):
         return f'{self.__first_name} {self.__last_name}'
 

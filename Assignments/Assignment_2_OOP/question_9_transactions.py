@@ -9,16 +9,16 @@ class Transaction:
         transaction_possible = self.__from_account.withdraw(amount)
         if transaction_possible:
             self.__to_account.deposit(amount)
-            print(f"{amount} transfered from Bank {from_account.account} to Bank {to_account.account}")
+            print(f"{amount} transfered from Bank {from_account.account_id} to Bank {to_account.account_id}")
         else:
             raise ValueError("Insufficient funds.")
 
 
 def main():
 
-    bank_1 = BankAccount("111", 1000.00, [])
-    bank_2 = BankAccount("222", 2000.00, [])
-    transaction_1 = Transaction(bank_1, bank_2, 1001.00)
+    bank_1 = BankAccount("111", 1000.00)
+    bank_2 = BankAccount("222", 2000.00)
+    transaction_1 = Transaction(bank_1, bank_2, 800.00)
 
 
 if __name__ == "__main__":

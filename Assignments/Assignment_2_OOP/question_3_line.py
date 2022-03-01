@@ -24,9 +24,10 @@ class Line:
         self.__end_point = new_end_point
 
     # derived property - meaning it is not being stored in the object but is derived from teh object's attributes.
+    @property
     def length(self):
-        distance = round(math.sqrt(((self.start_point.x - self.end_point.x) ** 2) +
-                                   ((self.start_point.y - self.end_point.y) ** 2)), 2)
+        distance = math.sqrt(((self.start_point.x - self.end_point.x) ** 2) +
+                                   ((self.start_point.y - self.end_point.y) ** 2))
         return distance
 
 

@@ -18,7 +18,7 @@ class Circle:
 
     @radius.setter
     def radius(self, radius):
-        if not isinstance(radius, (float, int)):
+        if not isinstance(radius, float):
             raise TypeError('Radius must be numeric')
         elif radius <= 0:
             raise ValueError("Radius must be greater than 0.")
@@ -29,11 +29,11 @@ class Circle:
         self.__color = color
 
     def get_area(self):
-        area = round(self.radius * self.radius * math.pi, 2)
+        area = self.radius * self.radius * math.pi
         return area
 
     def get_circumference(self):
-        circumference = round(((self.radius * 2) * math.pi), 2)
+        circumference = ((self.radius * 2) * math.pi)
         return circumference
 
     def __str__(self):

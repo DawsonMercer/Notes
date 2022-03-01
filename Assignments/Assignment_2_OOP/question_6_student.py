@@ -1,14 +1,12 @@
-from dataclasses import dataclass
 
-
-@dataclass
 class Student:
-    __id: int
-    __name: str
-    __address: str
-    __program: str
-    __current_courses: []  # contains a list of course IDs
-    __completed_courses: {}  # contains mapp from course ID to marks obtained
+    def __init__(self, id, name, address, program):
+        self.__id = id
+        self.__name = name
+        self.__address = address
+        self.__program = program
+        self.__current_courses = []  # contains a list of course IDs
+        self.__completed_courses= {}  # contains mapp from course ID to marks obtained
 
     @property
     def name(self):
@@ -26,6 +24,7 @@ class Student:
     def address(self, new_address):
         self.__address = new_address
 
+    @property
     def average_score(self):
         if len(self.__completed_courses) == 0:
             return -1

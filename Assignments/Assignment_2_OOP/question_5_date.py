@@ -2,17 +2,42 @@ import calendar
 
 
 class Date:
-    def __init__(self, day: int, month: int, year: int):
+    def __init__(self, year: int, month: int, day):
+        if isinstance(day, bool):
+            raise TypeError("Must be int")
         if not isinstance(day, int):
-            raise TypeError('Day must be int.')
+            raise TypeError("Must be int")
         if not isinstance(month, int):
-            raise TypeError('month must be int.')
+            raise TypeError("Must be int")
         if not isinstance(year, int):
-            raise TypeError('Year must be int.')
+            raise TypeError("Must be int")
+        if isinstance(year, float):
+            raise TypeError("Must be int")
+        if isinstance(month, float):
+            raise TypeError("Must be int")
+        if isinstance(day, str):
+            raise TypeError("Must be int")
+        if day >= 32 or day <1:
+            raise ValueError("Day must be between 1 and 31")
+        if month >= 13 or month <1:
+            raise ValueError("Month must be between 1 and 12")
+
 
         self.__day = day
         self.__month = month
         self.__year = year
+
+
+        # if isinstance(day, int):
+        # else:
+        #     raise TypeError('Day must be int.')
+        # if isinstance(month, int):
+        # else:
+        #     raise TypeError('month must be int.')
+        # if isinstance(year, int):
+        # else:
+        #     raise TypeError('Year must be int.')
+
 
     @property
     def day(self):
@@ -38,12 +63,14 @@ class Date:
     def year(self, new_year: int):
         self.__year = new_year
 
+    @property
     def is_leap_year(self):
         leap_year = False
         if calendar.isleap(self.year):
             leap_year = True
         return leap_year
 
+    @property
     def is_valid_date(self):
         is_valid = False
         is_leap_year = calendar.isleap(self.year)

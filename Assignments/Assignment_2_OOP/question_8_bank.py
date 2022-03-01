@@ -1,14 +1,12 @@
-from dataclasses import dataclass
 
-
-@dataclass
 class BankAccount:
-    __account_id: str
-    __balance: float
-    transaction_list: []
+    def __init__(self, account_id, balance):
+        self.__account_id = account_id
+        self.__balance = balance
+        self.__transaction_list = []
 
     @property
-    def account(self):
+    def account_id(self):
         return self.__account_id
 
     @property
