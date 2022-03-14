@@ -97,7 +97,7 @@ if (total_cost <= total_benefit):
 else:
     print("Project disapproved.")
         
-print("Time needed for cod execution in mSec",1000*(time.time()-t_start))
+print("Time needed for code execution in mSec",1000*(time.time()-t_start))
 # print(f"Counter: {counter}")
 
 
