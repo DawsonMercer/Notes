@@ -10,8 +10,10 @@ def main():
         else:
             character_stack.push(name)
 
+    print(character_stack.stack)
     while character_stack.size() > 0:
         print(character_stack.pop())
+
 
 
 
