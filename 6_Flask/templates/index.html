@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dawsons photo album</h1>
+    <h2>This is a collection of images</h2>
+
+    <a href="{{ url_for ('photos')}}">View Album</a>
+    <a href="{{ url_for ('file_upload')}}">Upload file</a>
+</body>
+</html>

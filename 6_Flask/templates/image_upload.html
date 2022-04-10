@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image upload</title>
+</head>
+<body>
+    <h2>Upload an image</h2>
+    <form action ="{{ url_for('file_upload') }}" enctype="multipart/form-data" method = "post">
+        <input type = "text" name="caption" placeholder="Enter a caption"><br>
+        <input type = "file" name="bicycle_image"><br>
+        <button>Submit</button>
+        <a href="{{url_for('main_page')}}">Home</a>
+    </form>
+</body>
+</html>

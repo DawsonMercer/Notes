@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bike album</title>
+</head>
+<body>
+    <h1>Bike photo album</h1>
+    {% for image in bicycle_images %}
+        <img src="static/images/{{ image[0] }}"></img>
+        <h2>{{ image[1] }}</h2>
+    {% endfor %}
+    <a href="{{url_for('main_page')}}">Home</a>
+
+
+</body>
+</html>
