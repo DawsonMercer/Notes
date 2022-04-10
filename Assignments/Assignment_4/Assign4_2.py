@@ -10,7 +10,7 @@ def reverse(num_list):
 
 
 def main():
-    num_list = [1,2,3,4]
+    num_list = [1, 2, 3, 4]
     print(num_list)
     reverse(num_list)
 
